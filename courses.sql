@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS courses 
 (code VARCHAR(40) PRIMARY KEY NOT NULL 
 CHECK(length(code)>=7),
-description STRING(400), 
+description VARCHAR(400), 
 start DATE NOT NULL,
 end DATE NOT NULL CHECK(end > start));
 INSERT INTO courses (code, description, start, end) VALUES ('INFO330A', 'Data and databases', '2023-04-01', '2023-06-01'); 
